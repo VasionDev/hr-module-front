@@ -1,0 +1,28 @@
+/* .recruitment-form {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+} */
+/* .recruitment-form > :nth-child(2n) {
+    margin-bottom: 1.5rem;
+} */
+
+/* .sec-1, .sec-2 {
+    display: flex;
+    flex-direction: column;
+} */
+
+.recruitment-form-wrap {
+    padding: 10px;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-label-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}

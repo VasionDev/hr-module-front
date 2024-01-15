@@ -1,0 +1,149 @@
+<form class="recruitment-form-wrap">
+    <div class="input-group-control">
+        <div class="input-label-group">
+            <ui5-label for="firstName" required show-colon>First name</ui5-label>
+            <ui5-input ngDefaultControl id="firstName" name="firstName" [(ngModel)]="recruitmentClass.firstName" required placeholder="Enter your first name" value=""></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="surName" required show-colon>Surname name</ui5-label>
+            <ui5-input ngDefaultControl id="surName" name="surName" [(ngModel)]="recruitmentClass.surName" required placeholder="Enter your surname" value=""></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="address_1" show-colon>Address 1</ui5-label>
+            <ui5-textarea ngDefaultControl id="address_1" name="address_1" [(ngModel)]="recruitmentClass.address_1" placeholder="Enter your address_1..."></ui5-textarea>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="address_2" show-colon>Address 2</ui5-label>
+            <ui5-textarea ngDefaultControl id="address_2" name="address_2" [(ngModel)]="recruitmentClass.address_2" placeholder="Enter your address_2..."></ui5-textarea>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="town" show-colon>Town</ui5-label>
+            <ui5-input ngDefaultControl id="town" name="town" [(ngModel)]="recruitmentClass.town" placeholder="Enter your town"></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="postCode" show-colon>Post Code</ui5-label>
+            <ui5-input ngDefaultControl id="postCode" name="postCode" [(ngModel)]="recruitmentClass.postCode" placeholder="Enter your post code"></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="mobile" required show-colon>Mobile</ui5-label>
+            <ui5-input ngDefaultControl id="mobile" name="mobile" [(ngModel)]="recruitmentClass.mobile" placeholder="Enter your mobile number"></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="telephone" show-colon>Telephone</ui5-label>
+            <ui5-input ngDefaultControl id="telephone" name="telephone" [(ngModel)]="recruitmentClass.telephone" placeholder="Enter your telephone number"></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="email" show-colon>Email</ui5-label>
+            <ui5-input ngDefaultControl id="email" name="email" [(ngModel)]="recruitmentClass.email" placeholder="Enter your email address"></ui5-input>
+        </div>
+    </div>
+
+    <div class="input-group-control">
+        <div class="input-label-group">
+            <ui5-label for="sex" required show-colon>Sex</ui5-label>
+            <ui5-select ngDefaultControl id="sex" name="sex" [(ngModel)]="recruitmentClass.sex" required>
+                <!-- <ui5-option *ngFor="let a of testA"></ui5-option> option</ui5-option> -->
+            <ui5-option *ngFor="let a of testA" [ngValue]="a">{{a.type}}</ui5-option>
+                
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="dob" show-colon>Date of birth</ui5-label>
+            <ui5-date-picker ngDefaultControl id="dob" name="dob" [(ngModel)]="recruitmentClass.dob" (change)="onDateChange($event)"></ui5-date-picker>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="ethnicity" show-colon>Ethnicity</ui5-label>
+            <ui5-select ngDefaultControl id="ethnicity" name="ethnicity" [(ngModel)]="recruitmentClass.ethnicity">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>White/British</ui5-option>
+                <ui5-option>White/Irish</ui5-option>
+                <ui5-option>Black/British</ui5-option>
+                <ui5-option>White/African</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="nationality" show-colon>Nationality</ui5-label>
+            <ui5-select ngDefaultControl id="nationality" name="nationality" [(ngModel)]="recruitmentClass.nationality">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>American</ui5-option>
+                <ui5-option>Indian</ui5-option>
+                <ui5-option>Bangladeshi</ui5-option>
+                <ui5-option>African</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="religion" show-colon>Religion</ui5-label>
+            <ui5-select ngDefaultControl id="religion" name="religion" [(ngModel)]="recruitmentClass.religion">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>Muslim</ui5-option>
+                <ui5-option>Hindu</ui5-option>
+                <ui5-option>Jewish</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="sexuality" show-colon>Sexuality</ui5-label>
+            <ui5-select ngDefaultControl id="sexuality" name="sexuality" [(ngModel)]="recruitmentClass.sexuality">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>Bisexual</ui5-option>
+                <ui5-option>Gay Man</ui5-option>
+                <ui5-option>I don't wish to disclose</ui5-option>
+            </ui5-select>
+        </div>
+    </div>
+
+    <div class="input-group-control">
+        <div class="input-label-group">
+            <ui5-label for="status" show-colon>Status</ui5-label>
+            <ui5-select ngDefaultControl id="status" name="status" [(ngModel)]="recruitmentClass.status">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>Job Enquiry</ui5-option>
+                <ui5-option>Job Application Sent</ui5-option>
+                <ui5-option>Job Application Received</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="statusDate" show-colon>Status Date</ui5-label>
+            <ui5-date-picker ngDefaultControl id="statusDate" name="statusDate" [(ngModel)]="recruitmentClass.statusDate" disabled></ui5-date-picker>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="source" show-colon>Source</ui5-label>
+            <ui5-select ngDefaultControl id="source" name="source" [(ngModel)]="recruitmentClass.source">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option>Facebook</ui5-option>
+                <ui5-option>Linkedin</ui5-option>
+                <ui5-option>Google</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="comment" show-colon>Comment</ui5-label>
+            <ui5-input ngDefaultControl id="comment" name="comment" [(ngModel)]="recruitmentClass.comment" placeholder="Enter referral name"></ui5-input>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="interviewDate" show-colon>Interview</ui5-label>
+            <ui5-date-picker ngDefaultControl id="interviewDate" name="interviewDate" [(ngModel)]="recruitmentClass.interviewDate"></ui5-date-picker>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="transport" show-colon>Transport</ui5-label>
+            <ui5-select ngDefaultControl id="transport" name="transport" [(ngModel)]="recruitmentClass.transport">
+                <ui5-option>Select option</ui5-option>
+                <ui5-option value="walk">Walk</ui5-option>
+                <ui5-option value="bike">Bike</ui5-option>
+                <ui5-option value="car">Car</ui5-option>
+                <ui5-option value="public">Public</ui5-option>
+            </ui5-select>
+        </div>
+        <div class="input-label-group">
+            <ui5-label for="expNote" show-colon>Experience Note</ui5-label>
+            <ui5-textarea ngDefaultControl id="expNote" name="expNote" [(ngModel)]="recruitmentClass.expNote" placeholder="Enter experience note..."></ui5-textarea>
+        </div>
+        
+    </div>
+
+    <div class="input-label-group">
+        <ui5-label for="isArchived" show-colon>Archived</ui5-label>
+        <ui5-checkbox ngDefaultControl id="isArchived" name="isArchived" [(ngModel)]="recruitmentClass.isArchived"></ui5-checkbox>
+        <!-- <input type="checkbox" id="isArchived" name="isArchived" [(ngModel)]="recruitmentClass.isArchived" (change)="onCheckboxChanges($event)"/> -->
+        <!-- <ui5-checkbox ngDefaultControl text="Archived" id="isArchived" name="isArchived" [(ngModel)]="recruitmentClass.isArchived" (change)="onCheckboxChanges($event)"></ui5-checkbox> -->
+    </div>
+</form>
+<button (click)="checkDataUpdate()">Submit</button>

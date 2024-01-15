@@ -1,0 +1,31 @@
+<div class="tool-layout">
+	<ui5-shellbar primary-title="Newcare" secondary-title="HR Management" notifications-count="1" show-notifications>
+		<ui5-input slot="searchField"></ui5-input>
+		<ui5-button icon="menu" slot="startButton" id="toggle"></ui5-button>
+		<ui5-avatar slot="profile">
+			<img src="assets/images/avatar.png">
+		</ui5-avatar>
+		<ui5-shellbar-item icon="action-settings" text="Settings" title="Settings"></ui5-shellbar-item>
+	</ui5-shellbar>
+
+  <ui5-side-navigation>
+    <ui5-side-navigation-item text="Home" icon="home"></ui5-side-navigation-item>
+    <ui5-side-navigation-item text="Enquiries" expanded selected icon="group">
+        <ui5-side-navigation-sub-item icon="add" text="Add New"></ui5-side-navigation-sub-item>
+        <ui5-side-navigation-sub-item icon="list" text="View Recruitments"></ui5-side-navigation-sub-item>
+    </ui5-side-navigation-item>
+    <ui5-side-navigation-item text="Staff" icon="company-view">
+      <ui5-side-navigation-sub-item icon="list" text="All Staff"></ui5-side-navigation-sub-item>
+      <ui5-side-navigation-sub-item text="Others"></ui5-side-navigation-sub-item>
+    </ui5-side-navigation-item>
+    <ui5-side-navigation-item text="Reports" icon="calendar">
+      <ui5-side-navigation-sub-item text="Local"></ui5-side-navigation-sub-item>
+      <ui5-side-navigation-sub-item text="Others"></ui5-side-navigation-sub-item>
+    </ui5-side-navigation-item>
+    <ui5-side-navigation-item slot="fixedItems" text="Useful Links" icon="chain-link"></ui5-side-navigation-item>
+    <ui5-side-navigation-item slot="fixedItems" text="History" icon="history"></ui5-side-navigation-item>
+  </ui5-side-navigation>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
